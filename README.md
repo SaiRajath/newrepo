@@ -41,16 +41,26 @@ A modern, responsive portfolio website for Sai Rajath CB, front-end developer.
 
 #### On Windows
 
-Run the application using the provided batch script:
+**Method 1:** Run the application using the provided batch script:
 ```
 start-dev.bat
 ```
 
-Or manually set the environment variable:
+**Method 2 (Alternative):** If Method 1 doesn't work or you encounter "ENOTSUP" errors, try the alternative approach:
+```
+start-dev-alt.bat
+```
+This will start the backend and frontend on separate ports (backend on 5000, frontend on 3000).
+
+**Method 3:** Manually set the environment variable:
 ```
 set NODE_ENV=development
 npx tsx server/index.ts
 ```
+
+**Note:** If you're using Node.js v22 or newer and encounter "ENOTSUP" errors, try:
+1. Installing an older version of Node.js (v16 or v18 is recommended)
+2. or Use the alternate method described above
 
 #### On macOS/Linux
 
@@ -68,8 +78,15 @@ NODE_ENV=development npx tsx server/index.ts
 ### Accessing the Website
 
 Once the application is running, open your browser and navigate to:
+
+**For the default method:**
 ```
 http://localhost:5000
+```
+
+**If using the alternative method (start-dev-alt.bat):**
+```
+http://localhost:3000
 ```
 
 ## Building for Production
