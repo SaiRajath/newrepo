@@ -1,0 +1,2 @@
+// This should be a binary file containing the resume, but as requested, we won't generate it here
+// In a real implementation, we would copy the PDF file from attached_assets to this location
