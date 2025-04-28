@@ -10,6 +10,7 @@ import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import { ThemeProvider } from "./components/ThemeProvider";
 
 function Home() {
@@ -24,6 +25,7 @@ function Home() {
         <ContactSection />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

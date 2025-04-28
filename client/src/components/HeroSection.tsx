@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import { Link } from "wouter";
 import resumeUrl from "@assets/SaiRajath_CV_ForntEndDeveloper.pdf";
 
 const HeroSection = () => {
@@ -55,10 +54,15 @@ const HeroSection = () => {
             </Button>
             
             <Button
-              asChild
               className="bg-[hsl(var(--primary))] dark:bg-[hsl(var(--secondary))] dark:hover:bg-[hsl(var(--secondary-dark))] text-white dark:text-[hsl(var(--primary))] px-6 py-6 rounded font-medium transition-colors duration-300 hover:bg-[hsl(var(--primary-light))]"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
             >
-              <Link href="/#contact">Get In Touch</Link>
+              Get In Touch
             </Button>
           </div>
         </div>
